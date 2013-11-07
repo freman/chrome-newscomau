@@ -9,8 +9,12 @@
 
 	"content_scripts": [{
 		"matches": [ "http://news.com.au/*", "http://www.news.com.au/*" ],
-		"js": [ "main.js" ],
+		"js": [ "injector.js" ],
 		"run_at": "document_start"
+	}, {
+		"matches": [ "http://news.com.au/*", "http://www.news.com.au/*" ],
+		"js": [ "jquery.js", "main.js" ],
+		"run_at": "document_end"
 	}],
 
 	"web_accessible_resources": ["payload.js"],
