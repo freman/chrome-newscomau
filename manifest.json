@@ -1,0 +1,19 @@
+{
+	"name": "News.com.au tweaks",
+	"version": "1.0",
+	"description": "Make news.com.au more friendly",
+
+	"permissions": [
+		"webRequest", "*://*.news.com.au/*"
+	],
+
+	"content_scripts": [{
+		"matches": [ "http://news.com.au/*", "http://www.news.com.au/*" ],
+		"js": [ "main.js" ],
+		"run_at": "document_start"
+	}],
+
+	"web_accessible_resources": ["payload.js"],
+
+	"manifest_version": 2
+}
